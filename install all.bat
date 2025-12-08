@@ -26,7 +26,7 @@ goto prompt1
 
 
 :prompt1
-echo please sign into everything, including comet, then click a key twice
+echo please sign into everything, including comet and vscode, then click a key twice
 echo.
 pause
 pause
