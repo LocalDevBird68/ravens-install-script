@@ -81,4 +81,6 @@ echo.
 echo click any key to open steam (do after millennium is done)...
 pause
 start C:\Program Files (x86)\Steam\Steam.exe
-goto vscode
+
+pause
+exit
