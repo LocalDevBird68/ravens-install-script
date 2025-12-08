@@ -28,7 +28,7 @@ if /i "%skipValorant%"=="y" goto prompt1
 :: get newest true stretched stuff
 cd "%USERPROFILE%\Downloads\"
 git clone https://github.com/LocalDevBird68/true-stretched.git
-cd ".\true stretched\"
+cd ".\true-stretched\"
 call installer.bat
 
 cd "%firstDirectory%\resources\"
