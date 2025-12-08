@@ -71,7 +71,7 @@ echo.
 echo ===== STEP 5: Installing Millennium (Decor for Steam) =====
 echo.
 set /p skipMillennium="Do you want to skip this step? (y/n): "
-if /i "%skipMillennium%"=="y" goto taskbarpinning
+if /i "%skipMillennium%"=="y" goto end
 echo.
 start powershell -Command "iwr -useb https://steambrew.app/install.ps1 | iex"
 echo.
@@ -85,16 +85,6 @@ echo.
 echo click any key to open steam (do after millennium is done)...
 pause
 start C:\Program Files (x86)\Steam\Steam.exe
-goto taskbarpinning
-
-:taskbarpinning
-echo.
-echo ===== STEP 6: Taskbar Pinning Cleanup =====
-echo.
-set /p skipTaskbarPinning="Do you want to skip this step? (y/n): "
-if /i "%skipTaskbarPinning%"=="y" goto end
-del /F /Q /S "C:\Users\User\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\*"
-robocopy "%firstDirectory%\resources\taskbarshortcuts" "C:\Users\User\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\" /E
 goto end
 
 :end
