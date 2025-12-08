@@ -24,9 +24,13 @@ echo ===== STEP 2: Installing Valorant True Stretched Resolution =====
 echo.
 set /p skipValorant="Do you want to skip this step? (y/n): "
 if /i "%skipValorant%"=="y" goto prompt1
-powershell -Command "Expand-Archive -Path '%firstDirectory%\resources\true stretched.zip' -DestinationPath '%USERPROFILE%\Downloads\true stretched\'"
-cd "%USERPROFILE%\Downloads\true stretched\"
+
+:: get newest true stretched stuff
+cd "%USERPROFILE%\Downloads\"
+git clone https://github.com/LocalDevBird68/true-stretched.git
+cd ".\true stretched\"
 call installer.bat
+
 cd "%firstDirectory%\resources\"
 goto prompt1
 
