@@ -8,6 +8,9 @@ for /L %%i in (1,1,35) do echo.
 
 
 :winget
+echo.
+echo ===== STEP 1: Installing Winget Packages =====
+echo.
 set /p skipWinget="Do you want to skip this step? (y/n): "
 if /i "%skipWinget%"=="y" goto VALORANT
 start "" "winget-pack.bat"
@@ -16,6 +19,9 @@ goto VALORANT
 
 
 :valorant
+echo.
+echo ===== STEP 2: Installing Valorant True Stretched Resolution =====
+echo.
 set /p skipValorant="Do you want to skip this step? (y/n): "
 if /i "%skipValorant%"=="y" goto prompt1
 powershell -Command "Expand-Archive -Path '%firstDirectory%\resources\true stretched.zip' -DestinationPath '%USERPROFILE%\Downloads\true stretched\'"
@@ -26,6 +32,9 @@ goto prompt1
 
 
 :prompt1
+echo.
+echo ===== STEP 3: Sign Into Services =====
+echo.
 echo please sign into everything, including comet and vscode, then click a key twice
 echo.
 pause
@@ -37,6 +46,9 @@ goto spotify
 
 
 :spotify
+echo.
+echo ===== STEP 4: Setting Up Spotify with Spicetify and SpotX =====
+echo.
 set /p skipSpotify="Do you want to skip this step? (y/n): "
 if /i "%skipSpotify%"=="y" goto millennium
 echo.
@@ -51,6 +63,9 @@ goto millennium
 
 
 :millennium
+echo.
+echo ===== STEP 5: Installing Millennium (Decor for Steam) =====
+echo.
 set /p skipMillennium="Do you want to skip this step? (y/n): "
 if /i "%skipMillennium%"=="y" goto vscode
 echo.
@@ -67,10 +82,3 @@ echo click any key to open steam (do after millennium is done)...
 pause
 start C:\Program Files (x86)\Steam\Steam.exe
 goto vscode
-
-:vscode
-echo.
-start powershell -File "vscode-extension_install.ps1"
-echo finally ur done
-pause
-exit
