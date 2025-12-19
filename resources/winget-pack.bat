@@ -1,4 +1,4 @@
-winget install git -e
+winget install --id Git.Git -e --source winget
 winget install --id=RevoUninstaller.RevoUninstaller -e
 winget install --id=7zip.7zip -e
 winget install --id=Microsoft.VisualStudioCode -e
@@ -14,3 +14,4 @@ winget install --id=RealVNC.VNCServer -e
 
 
 :: https://winget.ragerworks.com/search/all?limit=35
+
