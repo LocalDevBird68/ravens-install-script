@@ -82,12 +82,11 @@ echo 788ed8554492 (extension)
 echo dd5a94af5f22 (extension)
 echo https://chromewebstore.google.com/detail/steamdb/kdbmhfkmnlmbkgbabkdealhhbfhlmmon (install in extendium, puzzle icon)
 echo.
-echo click any key to open steam (do after millennium is done)...
-pause
-start C:\Program Files (x86)\Steam\Steam.exe
+echo open steam (do after millennium is done)...
 goto end
 
 :end
 pause
 
 exit
+
