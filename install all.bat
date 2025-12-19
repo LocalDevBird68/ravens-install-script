@@ -39,7 +39,7 @@ goto prompt1
 echo.
 echo ===== STEP 3: Sign Into Services =====
 echo.
-echo please sign into everything, including comet and vscode, then click a key twice
+echo please sign into vscode, spotify, and steam (and the rest of them that i can't remember right now)
 echo.
 pause
 pause
@@ -89,4 +89,5 @@ goto end
 
 :end
 pause
+
 exit
