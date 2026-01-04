@@ -14,6 +14,9 @@ echo.
 set /p skipWinget="Do you want to skip this step? (y/n): "
 if /i "%skipWinget%"=="y" goto VALORANT
 start "" "winget-pack.bat"
+
+echo please setup git and then close this command prompt and reopen, skip this step
+
 goto VALORANT
 
 
@@ -73,7 +76,8 @@ echo.
 set /p skipMillennium="Do you want to skip this step? (y/n): "
 if /i "%skipMillennium%"=="y" goto end
 echo.
-start powershell -Command "iwr -useb https://steambrew.app/install.ps1 | iex"
+cd "%firstDirectory%\resources\"
+start millennium.exe
 echo.
 echo install these ids:
 echo F8h9ZhwOdoNygNcAfjIZ (theme)
@@ -89,4 +93,5 @@ goto end
 pause
 
 exit
+
 
