@@ -2,6 +2,7 @@
 set
 set firstDirectory=%cd%
 cd "%firstDirectory%\resources\"
+reg import HWiNFO64_settings.reg
 
 :: clear the terminal
 for /L %%i in (1,1,35) do echo.
@@ -93,5 +94,6 @@ goto end
 pause
 
 exit
+
 
 
