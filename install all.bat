@@ -15,6 +15,7 @@ echo.
 set /p skipWinget="Do you want to skip this step? (y/n): "
 if /i "%skipWinget%"=="y" goto VALORANT
 start "" "winget-pack.bat"
+start RealVNC-Connect-Installer-3.2.0-Windows.exe
 
 echo please setup git and then close this command prompt and reopen, skip this step
 
@@ -94,6 +95,7 @@ goto end
 pause
 
 exit
+
 
 
 
